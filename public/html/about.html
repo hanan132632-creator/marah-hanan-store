@@ -3,64 +3,244 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>من نحن | قصة متجر مرح حنان ستور (مرححنان.store)</title>
+  <title>من نحن | قصة متجر مرح حنان ستور - مرححنان.store</title>
+  <meta name="description" content="تعرف على قصة متجر مرح حنان ستور، رؤيتنا في تقديم الفخامة والمنتجات المختارة بعناية فائقة، ومعايير الجودة والسرعة الحزمة الثامنة على مرححنان.store.">
+  <link rel="canonical" href="https://xn--mgblao3hjb.store/html/about.html">
+  <meta property="og:title" content="من نحن | قصة متجر مرح حنان ستور">
+  <meta property="og:description" content="وجهتك الأولى لأسلوب حياة راقٍ يجمع بين الفخامة، التقنية الذكية، والجودة المعتمدة.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
-  <style>body { font-family: 'Cairo', sans-serif; }</style>
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+  </style>
 </head>
-<body class="bg-stone-50 text-stone-900 min-h-screen flex flex-col">
+<body class="bg-stone-50 text-stone-900 min-h-screen flex flex-col selection:bg-rose-500 selection:text-white">
 
-  <header class="bg-white border-b border-stone-200 py-4 px-6 sticky top-0 z-30">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2">
-        <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-black flex items-center justify-center">م</div>
-        <span class="font-black text-lg text-stone-900">مرح حنان ستور</span>
+  <!-- Top bar -->
+  <div class="bg-stone-950 text-stone-300 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-rose-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">الحزمة الثامنة v8</span>
+        <span>متجر مرح حنان ستور الرسمي • شحن سريع وضمان ذهبي</span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-stone-400">
+        <span class="font-mono text-amber-400">مرححنان.store (xn--mgblao3hjb.store)</span>
+        <a href="contact.html" class="hover:text-white transition-colors">الدعم: hanan132632@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header with Navigation -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-stone-200 sticky top-0 z-30 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-600 to-amber-500 text-white font-black text-xl flex items-center justify-center shadow-md shadow-rose-600/20 group-hover:scale-105 transition-transform">
+          م
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <span class="font-black text-lg sm:text-xl text-stone-900 group-hover:text-rose-600 transition-colors">مرح حنان</span>
+            <span class="bg-stone-900 text-amber-300 text-[10px] font-bold px-1.5 py-0.5 rounded">ستور</span>
+          </div>
+          <p class="text-[10px] sm:text-[11px] text-stone-400">مرححنان.store</p>
+        </div>
       </a>
-      <a href="index.html" class="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1">
-        <span>العودة للمتجر</span>
+
+      <!-- Navigation Links -->
+      <nav class="hidden md:flex items-center gap-2 text-xs sm:text-sm font-bold text-stone-600">
+        <a href="index.html" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-stone-100 transition-colors">المتجر</a>
+        <a href="blog.html" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-stone-100 transition-colors">المدونة</a>
+        <a href="about.html" class="px-3 py-2 rounded-lg text-rose-600 bg-rose-50 border border-rose-100 transition-colors">من نحن</a>
+        <a href="contact.html" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-stone-100 transition-colors">اتصل بنا</a>
+        <a href="privacy.html" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-stone-100 transition-colors">الخصوصية</a>
+        <a href="terms.html" class="px-3 py-2 rounded-lg hover:text-rose-600 hover:bg-stone-100 transition-colors">شروط الاستخدام</a>
+      </nav>
+
+      <!-- Back to Store Action -->
+      <a href="index.html" class="bg-stone-900 hover:bg-rose-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-colors shadow-sm">
+        <span>تصفح المنتجات</span>
         <i data-lucide="arrow-left" class="w-4 h-4"></i>
       </a>
     </div>
+
+    <!-- Mobile Navigation Sub-bar -->
+    <div class="md:hidden border-t border-stone-100 px-4 py-2 flex items-center justify-around text-xs font-bold text-stone-600 bg-stone-50/80 overflow-x-auto">
+      <a href="index.html" class="hover:text-rose-600 whitespace-nowrap px-2 py-1">المتجر</a>
+      <a href="blog.html" class="hover:text-rose-600 whitespace-nowrap px-2 py-1">المدونة</a>
+      <a href="about.html" class="text-rose-600 font-black whitespace-nowrap px-2 py-1">من نحن</a>
+      <a href="contact.html" class="hover:text-rose-600 whitespace-nowrap px-2 py-1">اتصل بنا</a>
+      <a href="privacy.html" class="hover:text-rose-600 whitespace-nowrap px-2 py-1">الخصوصية</a>
+      <a href="terms.html" class="hover:text-rose-600 whitespace-nowrap px-2 py-1">الشروط</a>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-4 py-12 flex-1 space-y-8 text-right">
-    <div class="border-b pb-6">
-      <span class="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full">قصتنا ورؤيتنا</span>
-      <h1 class="text-3xl font-black text-stone-900 mt-2">من نحن - متجر مرح حنان ستور</h1>
-      <p class="text-stone-500 text-xs mt-1">الدومين الرسمي: مرححنان.store (xn--mgblao3hjb.store)</p>
-    </div>
-
-    <div class="space-y-6 text-sm text-stone-700 leading-relaxed">
-      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3">
-        <h2 class="font-bold text-stone-900 text-base flex items-center gap-2">
-          <i data-lucide="heart" class="w-5 h-5 text-rose-600"></i>
-          <span>حكاية الانطلاق وشغف التميز:</span>
-        </h2>
-        <p>انطلق "متجر مرح حنان ستور" برؤية سعودية طموحة تهدف إلى إحداث نقلة نوعية في عالم التسوق الإلكتروني، من خلال الجمع بين فخامة المنتجات المختارة بعناية فائقة، وأحدث تقنيات الويب والذكاء الاصطناعي التي تسهل على العميل اختيار هداياه ومشترياته بأعلى درجات الراحة والسرعة.</p>
-        <p>نعمل انطلاقاً من العاصمة الرياض لنلبي متطلبات عملائنا في جميع مدن ومحافظات المملكة ودول الخليج العربي.</p>
+  <!-- Hero Banner -->
+  <section class="bg-gradient-to-b from-stone-900 via-stone-900 to-stone-950 text-white py-14 px-4 sm:px-6 relative overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center space-y-4 relative z-10">
+      <div class="inline-flex items-center gap-2 bg-rose-500/20 border border-rose-500/30 text-rose-300 text-xs font-bold px-3.5 py-1.5 rounded-full">
+        <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+        <span>قصتنا، رؤيتنا، وشغف التميز</span>
       </div>
-
-      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-3">
-        <h2 class="font-bold text-stone-900 text-base flex items-center gap-2">
-          <i data-lucide="award" class="w-5 h-5 text-amber-500"></i>
-          <span>ركائزنا الأساسية:</span>
-        </h2>
-        <ul class="space-y-2 list-disc list-inside text-stone-600 pr-2">
-          <li><strong>الأصالة والجودة:</strong> منتجات أصلية 100% ومفحوصة بدقة مع ضمان ذهبي لاسترجاع المنتج.</li>
-          <li><strong>السرعة الفائقة (الحزمة الثامنة):</strong> معالجة فورية للطلبات وتوصيل خلال 24-48 ساعة.</li>
-          <li><strong>الذكاء الاصطناعي والويب الذكي:</strong> أدوات متطورة تساعد المتسوق على تنسيق الهدايا وصياغة بطاقات التهنئة.</li>
-          <li><strong>خدمة عملاء حقيقية:</strong> دعم متواصل عبر البريد المباشر: <strong class="text-rose-600 font-mono">hanan132632@gmail.com</strong>.</li>
-        </ul>
+      <h1 class="text-3xl sm:text-5xl font-black tracking-tight">
+        من نحن - متجر مرح حنان ستور
+      </h1>
+      <p class="text-stone-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        وجهتكم الأولى لأسلوب حياة راقٍ يجمع بين فخامة المنتجات المختارة بعناية فائقة، سرعة التنفيذ، وأحدث تقنيات الويب والذكاء الاصطناعي المساند.
+      </p>
+      <div class="pt-2 text-xs font-mono text-amber-300">
+        الدومين الرسمي المعتمد: مرححنان.store • xn--mgblao3hjb.store
       </div>
     </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-12 flex-1 space-y-10 text-right">
+    
+    <!-- Mission Card -->
+    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200/80 shadow-sm space-y-4">
+      <div class="flex items-center gap-3 border-b border-stone-100 pb-4">
+        <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+          <i data-lucide="heart" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h2 class="text-xl font-black text-stone-900">حكاية الانطلاق والريادة</h2>
+          <p class="text-stone-400 text-xs">بداية الحكاية والشغف بتقديم الأفضل</p>
+        </div>
+      </div>
+      <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+        انطلق <strong>«متجر مرح حنان ستور»</strong> برؤية سعودية طموحة تهدف إلى إحداث نقلة نوعية في عالم التسوق الإلكتروني؛ حيث نؤمن بأن اقتناء المنتجات الفاخرة وتقديم الهدايا لا يجب أن يكون مجرد معاملة تجارية عابرة، بل تجربة متكاملة تحمل البهجة وتصنع ذكريات تدوم طويلاً.
+      </p>
+      <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+        نعمل انطلاقاً من العاصمة <strong>الرياض</strong> لنلبي رغبات عملائنا الكرام في كافة مناطق ومدن المملكة العربية السعودية ودول مجلس التعاون الخليجي، ونحرص على توفير تجربة تسوق راقية تتطابق مع أعلى معايير الجودة والأمان الرقمي.
+      </p>
+    </div>
+
+    <!-- Pillars Grid -->
+    <div>
+      <div class="text-center sm:text-right mb-6">
+        <h3 class="text-2xl font-black text-stone-900">ركائزنا الأساسية التي نبني عليها ثقتكم</h3>
+        <p class="text-stone-500 text-xs mt-1">المعايير التي نلتزم بها يومياً في كل طلب وكل تفاعل</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        
+        <!-- Pillar 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-2xs space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-stone-900 text-base">الأصالة والجودة 100%</h4>
+          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+            كافة المنتجات المعروضة في متجرنا يتم فحصها بدقة متناهية والتأكد من مطابقتها للمواصفات السعودية والخليجية المعتمدة، مع ضمان ذهبي يتيح الاستبدال والاسترجاع لمدة 14 يوماً.
+          </p>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-2xs space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center">
+            <i data-lucide="zap" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-stone-900 text-base">الحزمة الثامنة (Ultra-Fast Suite v8)</h4>
+          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+            اعتمدنا بنية برمجية وتقنية متقدمة تضمن سرعة معالجة الطلبات، وتجهيز الشحنات الفوري خلال 24 إلى 48 ساعة فقط في الرياض والمدن الرئيسية.
+          </p>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-2xs space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center">
+            <i data-lucide="sparkles" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-stone-900 text-base">أدوات الذكاء الاصطناعي</h4>
+          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+            وفرنا في متجرنا مساعداً ذكياً يساعدك على مطابقة الهدايا وصياغة بطاقات التهنئة الرقيقة المخصصة لأحبابك بنقرة زر واحدة.
+          </p>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-stone-200 shadow-2xs space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <h4 class="font-bold text-stone-900 text-base">حماية البيانات والشفافية</h4>
+          <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+            نلتزم التزاماً صارماً بنظام حماية البيانات الشخصية السعودي (PDPL)، وبوابات دفع إلكتروني مشفرة ومؤمنة بالكامل لحماية بيانات بطاقاتكم وأموالكم.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Official Contacts & Trust Details -->
+    <div class="bg-gradient-to-br from-stone-900 to-stone-950 text-white p-6 sm:p-8 rounded-3xl space-y-6">
+      <div class="border-b border-stone-800 pb-4">
+        <h3 class="text-xl font-black text-stone-100">بيانات الاتصال والتوثيق الرسمي</h3>
+        <p class="text-stone-400 text-xs mt-1">تواصل معنا مباشرة عبر القنوات المعتمدة</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
+        <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 space-y-1">
+          <div class="text-amber-400 font-bold flex items-center gap-1.5">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            <span>البريد الإلكتروني المباشر</span>
+          </div>
+          <a href="mailto:hanan132632@gmail.com" class="text-stone-200 font-mono block hover:text-white">
+            hanan132632@gmail.com
+          </a>
+        </div>
+
+        <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 space-y-1">
+          <div class="text-rose-400 font-bold flex items-center gap-1.5">
+            <i data-lucide="map-pin" class="w-4 h-4"></i>
+            <span>المقر الرئيسي</span>
+          </div>
+          <p class="text-stone-200">الرياض، المملكة العربية السعودية</p>
+        </div>
+
+        <div class="bg-stone-800/80 p-4 rounded-xl border border-stone-700 space-y-1">
+          <div class="text-emerald-400 font-bold flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4"></i>
+            <span>الدومين الرسمي</span>
+          </div>
+          <p class="text-stone-200 font-mono">مرححنان.store</p>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+        <a href="contact.html" class="bg-rose-600 hover:bg-rose-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs flex items-center gap-2 transition-colors">
+          <span>راسلنا عبر نموذج الاتصال</span>
+          <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i>
+        </a>
+        <div class="flex items-center gap-3 text-xs text-stone-400">
+          <a href="shipping.html" class="hover:text-stone-200">الشحن</a> •
+          <a href="refund.html" class="hover:text-stone-200">الاسترجاع</a> •
+          <a href="privacy.html" class="hover:text-stone-200">الخصوصية</a> •
+          <a href="terms.html" class="hover:text-stone-200">شروط الاستخدام</a>
+        </div>
+      </div>
+    </div>
+
   </main>
 
-  <footer class="bg-stone-900 text-stone-400 py-6 text-center text-xs">
+  <!-- Footer -->
+  <footer class="bg-stone-900 text-stone-400 py-8 px-4 text-center text-xs border-t border-stone-800 space-y-3">
+    <div class="flex flex-wrap justify-center gap-4 text-stone-300 font-bold">
+      <a href="index.html" class="hover:text-rose-400">المتجر</a>
+      <a href="blog.html" class="hover:text-rose-400">المدونة</a>
+      <a href="about.html" class="text-rose-500">من نحن</a>
+      <a href="contact.html" class="hover:text-rose-400">اتصل بنا</a>
+      <a href="privacy.html" class="hover:text-rose-400">سياسة الخصوصية</a>
+      <a href="terms.html" class="hover:text-rose-400">شروط الاستخدام</a>
+      <a href="shipping.html" class="hover:text-rose-400">الشحن والتوصيل</a>
+      <a href="refund.html" class="hover:text-rose-400">الاسترجاع والضمان</a>
+    </div>
     <p>جميع الحقوق محفوظة © متجر مرح حنان ستور • مرححنان.store (xn--mgblao3hjb.store)</p>
   </footer>
+
   <script>lucide.createIcons();</script>
 </body>
 </html>

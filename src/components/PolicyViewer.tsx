@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { POLICIES, PolicyData } from '../data/policies';
 import { 
   ShieldCheck, 
@@ -26,6 +26,13 @@ export const PolicyViewer: React.FC<PolicyViewerProps> = ({
   onBackToStore,
 }) => {
   const [activeKey, setActiveKey] = useState<string>(initialPolicy);
+
+  useEffect(() => {
+    if (initialPolicy) {
+      setActiveKey(initialPolicy);
+    }
+  }, [initialPolicy]);
+
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [contactForm, setContactForm] = useState({
     name: '',

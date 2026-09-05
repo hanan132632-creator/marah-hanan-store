@@ -207,6 +207,16 @@ export default function App() {
       setCurrentView('policies');
       if (policyType) setSelectedPolicyType(policyType);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (view === 'blog') {
+      setCurrentView('store');
+      setTimeout(() => {
+        const el = document.getElementById('blog-section');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        } else {
+          window.scrollTo({ top: 1100, behavior: 'smooth' });
+        }
+      }, 100);
     } else {
       setCurrentView('store');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -351,7 +361,7 @@ export default function App() {
               </div>
 
               {/* Editorial Guides & Articles Showcase */}
-              <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6 text-right">
+              <div id="blog-section" className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6 text-right scroll-mt-24">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-5">
                   <div>
                     <span className="text-[11px] font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100">

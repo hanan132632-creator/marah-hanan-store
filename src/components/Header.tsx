@@ -9,8 +9,12 @@ import {
   ShieldCheck, 
   Globe, 
   Truck, 
-  Flame, 
-  FileText
+  FileText,
+  BookOpen,
+  Info,
+  Mail,
+  RotateCcw,
+  ArrowLeft
 } from 'lucide-react';
 import { Currency } from '../types';
 
@@ -130,31 +134,52 @@ export const Header: React.FC<HeaderProps> = ({
           <nav className="hidden xl:flex items-center gap-1 text-sm font-medium text-stone-300">
             <button
               onClick={() => onNavigate('store')}
-              className={`px-3 py-2 rounded-lg transition-colors ${currentView === 'store' ? 'text-rose-400 bg-stone-800' : 'hover:text-white hover:bg-stone-800/50'}`}
+              className={`px-3 py-2 rounded-lg transition-colors font-bold ${currentView === 'store' ? 'text-rose-400 bg-stone-800' : 'hover:text-white hover:bg-stone-800/50'}`}
             >
-              الرئيسية والمنتجات
+              المتجر
             </button>
 
             <button
-              onClick={onOpenAISuite}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-rose-500/10 to-amber-500/10 border border-rose-500/30 text-rose-300 hover:text-white hover:from-rose-600 hover:to-amber-600 transition-all font-semibold shadow-sm"
+              onClick={() => onNavigate('blog')}
+              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors font-medium"
             >
-              <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
-              أدوات الذكاء الاصطناعي
+              المدونة
             </button>
 
             <button
-              onClick={() => onNavigate('policies', 'shipping')}
-              className={`px-3 py-2 rounded-lg transition-colors ${currentView === 'policies' ? 'text-rose-400 bg-stone-800' : 'hover:text-white hover:bg-stone-800/50'}`}
+              onClick={() => onNavigate('policies', 'about')}
+              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors font-medium"
             >
-              سياسات المتجر
+              من نحن
             </button>
 
             <button
               onClick={() => onNavigate('policies', 'contact')}
-              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors"
+              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors font-medium"
             >
               اتصل بنا
+            </button>
+
+            <button
+              onClick={() => onNavigate('policies', 'privacy')}
+              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors font-medium"
+            >
+              الخصوصية
+            </button>
+
+            <button
+              onClick={() => onNavigate('policies', 'terms')}
+              className="px-3 py-2 rounded-lg hover:text-white hover:bg-stone-800/50 transition-colors font-medium"
+            >
+              شروط الاستخدام
+            </button>
+
+            <button
+              onClick={onOpenAISuite}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-gradient-to-r from-rose-500/10 to-amber-500/10 border border-rose-500/30 text-rose-300 hover:text-white hover:from-rose-600 hover:to-amber-600 transition-all font-semibold shadow-sm mr-1"
+            >
+              <Sparkles className="w-4 h-4 text-amber-400 animate-pulse" />
+              أدوات الذكاء الاصطناعي
             </button>
           </nav>
 
@@ -198,13 +223,14 @@ export const Header: React.FC<HeaderProps> = ({
               </span>
             </button>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu Toggle (الثلاث شرط تحت بعض) */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 text-stone-300 hover:text-white rounded-lg hover:bg-stone-800"
-              aria-label="القائمة"
+              className="xl:hidden p-2.5 text-stone-200 hover:text-white rounded-xl bg-stone-800 hover:bg-stone-700 border border-stone-700 transition-colors shadow-sm"
+              aria-label="قائمة الصفحات والتنقل"
+              title="القائمة الرئيسية"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6 text-rose-400" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
@@ -225,57 +251,119 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu (قائمة الثلاث شرط تحت بعض) */}
       {mobileMenuOpen && (
-        <div className="xl:hidden bg-stone-950 border-t border-stone-800 px-4 py-4 space-y-2">
+        <div className="xl:hidden bg-stone-950/98 backdrop-blur-lg border-t border-stone-800 px-4 py-5 space-y-2.5 shadow-2xl">
+          <div className="flex items-center justify-between px-2 pb-2 border-b border-stone-800/80 text-xs font-bold text-stone-400">
+            <span>القائمة الرئيسية والصفحات</span>
+            <span className="text-amber-400 font-mono text-[11px]">مرححنان.store</span>
+          </div>
+
+          {/* 1. المتجر */}
           <button
             onClick={() => { onNavigate('store'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-200 hover:bg-stone-800 font-medium text-sm flex items-center justify-between"
+            className={`w-full text-right py-3 px-3.5 rounded-xl font-bold text-sm flex items-center justify-between transition-all ${currentView === 'store' ? 'bg-rose-600/20 text-rose-300 border border-rose-500/40 shadow-sm' : 'bg-stone-900 text-stone-100 hover:bg-stone-850 border border-stone-800'}`}
           >
-            <span>الرئيسية وكافة المنتجات</span>
-            <Flame className="w-4 h-4 text-rose-500" />
+            <div className="flex items-center gap-3">
+              <ShoppingBag className="w-4 h-4 text-rose-500" />
+              <span className="text-base">المتجر</span>
+            </div>
+            <span className="text-xs text-rose-400 font-medium">الرئيسية والمنتجات</span>
           </button>
+
+          {/* 2. المدونة */}
           <button
-            onClick={() => { onOpenAISuite(); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-rose-300 bg-rose-500/10 border border-rose-500/20 font-bold text-sm flex items-center justify-between"
+            onClick={() => { onNavigate('blog'); setMobileMenuOpen(false); }}
+            className="w-full text-right py-3 px-3.5 rounded-xl font-bold text-sm flex items-center justify-between transition-all bg-stone-900 text-stone-100 hover:bg-stone-850 border border-stone-800"
           >
-            <span>أدوات الذكاء الاصطناعي وويب ذكي</span>
-            <Sparkles className="w-4 h-4 text-amber-400" />
+            <div className="flex items-center gap-3">
+              <BookOpen className="w-4 h-4 text-amber-400" />
+              <span className="text-base">المدونة</span>
+            </div>
+            <span className="text-xs text-amber-400/90 font-medium">مقالات وأدلة حصرية</span>
           </button>
+
+          {/* 3. من نحن */}
           <button
-            onClick={() => { onNavigate('policies', 'shipping'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-300 hover:bg-stone-800 font-medium text-sm flex items-center justify-between"
+            onClick={() => { onNavigate('policies', 'about'); setMobileMenuOpen(false); }}
+            className="w-full text-right py-3 px-3.5 rounded-xl font-bold text-sm flex items-center justify-between transition-all bg-stone-900 text-stone-100 hover:bg-stone-850 border border-stone-800"
           >
-            <span>سياسة الشحن والتوصيل</span>
-            <Truck className="w-4 h-4 text-stone-400" />
+            <div className="flex items-center gap-3">
+              <Info className="w-4 h-4 text-sky-400" />
+              <span className="text-base">من نحن</span>
+            </div>
+            <span className="text-xs text-stone-400 font-medium">قصة المتجر ورؤيتنا</span>
           </button>
-          <button
-            onClick={() => { onNavigate('policies', 'refund'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-300 hover:bg-stone-800 font-medium text-sm flex items-center justify-between"
-          >
-            <span>سياسة الاستبدال والاسترجاع (14 يوماً)</span>
-            <ShieldCheck className="w-4 h-4 text-stone-400" />
-          </button>
-          <button
-            onClick={() => { onNavigate('policies', 'privacy'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-300 hover:bg-stone-800 font-medium text-sm flex items-center justify-between"
-          >
-            <span>سياسة الخصوصية وسرية المعلومات</span>
-            <FileText className="w-4 h-4 text-stone-400" />
-          </button>
-          <button
-            onClick={() => { onNavigate('policies', 'terms'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-300 hover:bg-stone-800 font-medium text-sm flex items-center justify-between"
-          >
-            <span>الشروط والأحكام العامة</span>
-            <FileText className="w-4 h-4 text-stone-400" />
-          </button>
+
+          {/* 4. اتصل بنا */}
           <button
             onClick={() => { onNavigate('policies', 'contact'); setMobileMenuOpen(false); }}
-            className="w-full text-right py-2 px-3 rounded-lg text-stone-300 hover:bg-stone-800 font-medium text-sm"
+            className="w-full text-right py-3 px-3.5 rounded-xl font-bold text-sm flex items-center justify-between transition-all bg-stone-900 text-stone-100 hover:bg-stone-850 border border-stone-800"
           >
-            اتصل بنا (hanan132632@gmail.com)
+            <div className="flex items-center gap-3">
+              <Mail className="w-4 h-4 text-emerald-400" />
+              <span className="text-base">اتصل بنا</span>
+            </div>
+            <span className="text-xs text-stone-400 font-mono">خدمة العملاء والدعم</span>
           </button>
+
+          {/* 5. سياسة الخصوصية */}
+          <button
+            onClick={() => { onNavigate('policies', 'privacy'); setMobileMenuOpen(false); }}
+            className="w-full text-right py-2.5 px-3.5 rounded-xl font-semibold text-sm flex items-center justify-between transition-all bg-stone-900/60 text-stone-200 hover:bg-stone-850 border border-stone-800/80"
+          >
+            <div className="flex items-center gap-3">
+              <ShieldCheck className="w-4 h-4 text-purple-400" />
+              <span>سياسة الخصوصية</span>
+            </div>
+            <span className="text-xs text-stone-400">حماية البيانات PDPL</span>
+          </button>
+
+          {/* 6. شروط الاستخدام */}
+          <button
+            onClick={() => { onNavigate('policies', 'terms'); setMobileMenuOpen(false); }}
+            className="w-full text-right py-2.5 px-3.5 rounded-xl font-semibold text-sm flex items-center justify-between transition-all bg-stone-900/60 text-stone-200 hover:bg-stone-850 border border-stone-800/80"
+          >
+            <div className="flex items-center gap-3">
+              <FileText className="w-4 h-4 text-stone-400" />
+              <span>شروط الاستخدام</span>
+            </div>
+            <span className="text-xs text-stone-400">الأحكام والضوابط</span>
+          </button>
+
+          {/* Other policies strip */}
+          <div className="grid grid-cols-2 gap-2 pt-1">
+            <button
+              onClick={() => { onNavigate('policies', 'shipping'); setMobileMenuOpen(false); }}
+              className="py-2.5 px-3 rounded-lg bg-stone-900 text-stone-300 hover:text-white border border-stone-800 text-xs font-bold flex items-center justify-center gap-2"
+            >
+              <Truck className="w-3.5 h-3.5 text-rose-400" />
+              <span>الشحن والتوصيل</span>
+            </button>
+            <button
+              onClick={() => { onNavigate('policies', 'refund'); setMobileMenuOpen(false); }}
+              className="py-2.5 px-3 rounded-lg bg-stone-900 text-stone-300 hover:text-white border border-stone-800 text-xs font-bold flex items-center justify-center gap-2"
+            >
+              <RotateCcw className="w-3.5 h-3.5 text-emerald-400" />
+              <span>الاسترجاع والضمان</span>
+            </button>
+          </div>
+
+          {/* AI CTA Button in Drawer */}
+          <div className="pt-2">
+            <button
+              onClick={() => { onOpenAISuite(); setMobileMenuOpen(false); }}
+              className="w-full py-3 px-3.5 rounded-xl text-rose-200 bg-gradient-to-r from-rose-950/80 to-amber-950/80 border border-rose-500/30 font-bold text-xs sm:text-sm flex items-center justify-between shadow-md"
+            >
+              <div className="flex items-center gap-2.5">
+                <Sparkles className="w-4 h-4 text-amber-400 animate-spin" />
+                <span>أدوات الذكاء الاصطناعي الفائقة</span>
+              </div>
+              <span className="text-[10px] bg-rose-600 text-white font-black px-2 py-0.5 rounded-md">
+                فورية
+              </span>
+            </button>
+          </div>
         </div>
       )}
     </header>
