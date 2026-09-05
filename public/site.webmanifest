@@ -1,16 +1,27 @@
 {
+  "id": "/",
   "name": "مرح حنان ستور | Marah Hanan Store",
   "short_name": "مرح حنان",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#18181b",
   "theme_color": "#e11d48",
   "description": "متجر إلكتروني ذكي فائق السرعة على النطاق xn--mgblao3hjb.store (مرححنان.store)",
+  "lang": "ar",
+  "dir": "rtl",
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
     }
   ]
 }
