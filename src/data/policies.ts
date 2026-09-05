@@ -1,3 +1,5 @@
+import { Language } from '../types';
+
 export interface PolicySection {
   title: string;
   content: string[];
@@ -10,7 +12,7 @@ export interface PolicyData {
   sections: PolicySection[];
 }
 
-export const POLICIES: Record<string, PolicyData> = {
+export const POLICIES_AR: Record<string, PolicyData> = {
   about: {
     title: 'من نحن - قصة مرح حنان ستور',
     subtitle: 'وجهتك الأولى لأسلوب حياة راقٍ يجمع بين الفخامة، التقنية الذكية، والجودة المعتمدة',
@@ -217,3 +219,312 @@ export const POLICIES: Record<string, PolicyData> = {
     ]
   }
 };
+
+export const POLICIES_EN: Record<string, PolicyData> = {
+  about: {
+    title: 'About Us - Marah Hanan Store Story',
+    subtitle: 'Your premier destination for an elevated lifestyle blending elegance, smart technology, and certified quality',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Our Vision & Mission',
+        content: [
+          'Marah Hanan Store (Verified domain: marahhanan.store / xn--mgblao3hjb.store) was founded as an innovative Arab pioneer in smart, ultra-fast electronic commerce.',
+          'We believe shopping is an integrated journey that begins with seamless browsing and assistive AI, culminating in the doorstep delivery of authentic, premium-packaged goods tailored for our valued patrons in Saudi Arabia and the GCC.'
+        ]
+      },
+      {
+        title: 'Suite v8 - The Ultra-Fast Standard',
+        content: [
+          'Engineered following the "Ultra-Fast Suite v8" architectural framework, fusing high-throughput edge nodes, instant micro-interactions, and Gemini 3.8 Flash AI engines to eliminate latency entirely.',
+          'Absolute transparency, a 14-day golden guarantee on every single item, and rapid courier fulfillment form our core daily principles.'
+        ]
+      },
+      {
+        title: 'Core Values',
+        content: [
+          'Authenticity & Quality: Every single product undergoes rigorous quality and safety inspections.',
+          'Exceptional Customer Care: Dedicated representatives available 24/7 at hanan132632@gmail.com.',
+          'Bank-Grade Security: Industry-standard 256-bit encryption for all payments and personal customer data.'
+        ]
+      }
+    ]
+  },
+
+  shipping: {
+    title: 'Express Shipping & Delivery Policy',
+    subtitle: 'Ultra-fast delivery across all cities and provinces of Saudi Arabia and the Arabian Gulf',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Delivery Times & Coverage',
+        content: [
+          'Riyadh & Metropolitan Centers: Express delivery within 24 to 48 hours maximum.',
+          'Other Saudi Regions & Cities: 2 to 4 business days via verified courier partners (Aramex, SMSA, SPL).',
+          'GCC Countries (UAE, Kuwait, Qatar, Bahrain, Oman): 4 to 7 business days with live doorstep parcel tracking.'
+        ]
+      },
+      {
+        title: 'Shipping Rates & Free Shipping Promotion',
+        content: [
+          'Free Shipping: Enjoy 100% complimentary shipping on all orders over 200 SAR within Saudi Arabia.',
+          'Orders under 200 SAR: A flat express courier fee of 25 SAR applies nationwide.',
+          'GCC Cross-Border Rates: Calculated precisely at checkout based on weight and country (typically 45-65 SAR).'
+        ]
+      }
+    ]
+  },
+
+  refund: {
+    title: '14-Day Return, Exchange & Golden Warranty Policy',
+    subtitle: 'Shop with absolute peace of mind with our 14-day hassle-free returns and golden replacement warranty',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Conditions for Returns & Exchanges',
+        content: [
+          'Customers are entitled to request a return or exchange within 14 days of order receipt.',
+          'Products must be in their original, unused condition, with intact packaging, tags, and all accessories.',
+          'If the return is due to a verified manufacturer defect or shipping mistake, Marah Hanan Store covers 100% of return shipping fees.',
+          'If the return is based on customer preference without product fault, only the courier return fee is deducted and the remainder refunded.'
+        ]
+      },
+      {
+        title: 'Excluded Items',
+        content: [
+          'In accordance with Saudi Ministry of Commerce hygiene and public health regulations, opened cosmetics, skincare, and unsealed perfumes cannot be returned unless a manufacturing defect is present.'
+        ]
+      }
+    ]
+  },
+
+  privacy: {
+    title: 'Privacy Policy & Personal Data Protection',
+    subtitle: 'Strict commitment to protecting your privacy in compliance with Saudi Personal Data Protection Law (PDPL)',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Data Collection & Usage',
+        content: [
+          'We collect only the essential details needed to fulfill your orders: Full name, mobile number, delivery address, and email.',
+          'Your information is strictly used for order processing, dispatch updates, and customer service.',
+          'We never sell, rent, or trade your personal data to third parties for advertising.'
+        ]
+      },
+      {
+        title: 'Payment & Card Security',
+        content: [
+          'Marah Hanan Store does not store credit card or debit card credentials on its servers.',
+          'All transactions are processed through certified gateways with 256-bit SSL encryption and PCI-DSS compliance.'
+        ]
+      }
+    ]
+  },
+
+  terms: {
+    title: 'Terms and Conditions of Service',
+    subtitle: 'Regulatory guidelines governing purchases and interactions on Marah Hanan Store',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Introduction & Agreement',
+        content: [
+          'Welcome to Marah Hanan Store, accessible via the domain xn--mgblao3hjb.store (marahhanan.store). By placing an order, you agree to abide by these terms under the Saudi E-Commerce Law.'
+        ]
+      },
+      {
+        title: 'Pricing & VAT Compliance',
+        content: [
+          'All listed prices are in Saudi Riyals (SAR) and include the statutory 15% Value Added Tax (VAT) mandated in Saudi Arabia.',
+          'A ZATCA-compliant simplified electronic tax invoice is automatically generated for every completed purchase.'
+        ]
+      }
+    ]
+  },
+
+  faq: {
+    title: 'Frequently Asked Questions (FAQ)',
+    subtitle: 'Direct answers to the most common queries regarding ordering, payments, and warranties',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'How do I order from Marah Hanan Store?',
+        content: [
+          'Browse our curated categories or use our Gemini AI Shopping Advisor. Add desired items to your shopping bag, click checkout, fill in your delivery details, select your preferred payment method, and receive instant confirmation.'
+        ]
+      },
+      {
+        title: 'What payment options are available?',
+        content: [
+          'We accept Saudi Mada cards, Apple Pay, Visa, Mastercard, interest-free 4-payment installments via Tamara and Tabby, and Cash on Delivery (COD) within Saudi Arabia.'
+        ]
+      },
+      {
+        title: 'Are products authentic and guaranteed?',
+        content: [
+          '100% yes! All items are brand authentic, sourced directly from verified manufacturers, and protected by our 14-day Golden Guarantee.'
+        ]
+      }
+    ]
+  },
+
+  contact: {
+    title: 'Customer Support & Contact Us',
+    subtitle: 'The Marah Hanan Store team is delighted to assist you around the clock',
+    lastUpdated: 'September 2025',
+    sections: [
+      {
+        title: 'Official Contact Information',
+        content: [
+          'Official Domain: marahhanan.store (xn--mgblao3hjb.store)',
+          'Customer Service Email: hanan132632@gmail.com',
+          'Support Hours: Saturday to Thursday, 9:00 AM – 10:00 PM (Makkah Time).',
+          'Headquarters: Riyadh, Kingdom of Saudi Arabia.'
+        ]
+      }
+    ]
+  }
+};
+
+export const POLICIES_FR: Record<string, PolicyData> = {
+  about: {
+    title: 'À Propos - L’Histoire de Marah Hanan Store',
+    subtitle: 'Votre destination privilégiée pour un art de vivre mêlant élégance, technologies intelligentes et qualité certifiée',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Notre Vision & Notre Mission',
+        content: [
+          'Marah Hanan Store (domaine certifié : marahhanan.store / xn--mgblao3hjb.store) a été créé comme une référence arabe et internationale dans le e-commerce intelligent et ultra-rapide.',
+          'Nous concevons chaque commande comme une expérience d’exception, de l’assistance IA personnalisée à la livraison soignée d’articles authentiques emballés avec prestige.'
+        ]
+      },
+      {
+        title: 'Suite v8 - Le Standard Ultra-Rapide',
+        content: [
+          'Bâti sur l’architecture "Ultra-Fast Suite v8" combinant serveurs haute performance et moteur d’intelligence artificielle Gemini 3.8 Flash pour une navigation fluide sans temps d’attente.',
+          'Une garantie dorée de 14 jours, une transparence absolue et une expédition express sont nos engagements quotidiens.'
+        ]
+      }
+    ]
+  },
+
+  shipping: {
+    title: 'Politique de Livraison Express',
+    subtitle: 'Expédition ultra-rapide vers toutes les villes d’Arabie Saoudite et les pays du Golfe',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Délais et Zones de Livraison',
+        content: [
+          'Riyad et grandes métropoles : Livraison express sous 24 à 48 heures maximum.',
+          'Autres régions d’Arabie Saoudite : 2 à 4 jours ouvrés avec nos partenaires certifiés (Aramex, SMSA, SPL).',
+          'Pays du Golfe (Émirats, Koweït, Qatar, Bahreïn, Oman) : 4 à 7 jours ouvrés avec suivi de colis en direct.'
+        ]
+      },
+      {
+        title: 'Tarifs et Livraison Gratuite',
+        content: [
+          'Livraison Gratuite : offerte pour toute commande supérieure à 200 SAR en Arabie Saoudite.',
+          'Commandes inférieures à 200 SAR : tarif forfaitaire de 25 SAR sur tout le territoire saoudien.'
+        ]
+      }
+    ]
+  },
+
+  refund: {
+    title: 'Garantie Dorée, Retours et Échanges 14 Jours',
+    subtitle: 'Achetez en toute sérénité grâce à notre politique de retour flexible sous 14 jours',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Conditions de Retour et d’Échange',
+        content: [
+          'Vous disposez de 14 jours à compter de la réception de votre commande pour demander un retour ou un échange.',
+          'L’article doit être neuf, non utilisé, dans son emballage d’origine complet avec ses étiquettes.',
+          'En cas de défaut avéré ou d’erreur d’envoi, les frais de retour sont pris en charge à 100% par Marah Hanan Store.'
+        ]
+      }
+    ]
+  },
+
+  privacy: {
+    title: 'Politique de Confidentialité et Protection des Données',
+    subtitle: 'Engagement strict envers la confidentialité selon la loi saoudienne PDPL',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Collecte et Utilisation des Données',
+        content: [
+          'Nous ne collectons que les informations indispensables au traitement de votre commande : Nom, téléphone, adresse et e-mail.',
+          'Vos données ne sont en aucun cas vendues ou partagées avec des tiers publicitaires.',
+          'Les paiements sont protégés par un chiffrement SSL 256-bit et conformes aux normes PCI-DSS.'
+        ]
+      }
+    ]
+  },
+
+  terms: {
+    title: 'Conditions Générales de Vente',
+    subtitle: 'Règles et conditions régissant vos achats sur Marah Hanan Store',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Introduction et Acceptation',
+        content: [
+          'Bienvenue sur Marah Hanan Store (marahhanan.store). Toute commande implique l’adhésion pleine et entière à nos conditions générales de vente.'
+        ]
+      },
+      {
+        title: 'Prix et TVA',
+        content: [
+          'Tous les prix sont affichés en Riyals Saoudiens (SAR) et incluent la TVA légale de 15%. Une facture fiscale électronique conforme ZATCA est fournie pour chaque achat.'
+        ]
+      }
+    ]
+  },
+
+  faq: {
+    title: 'Foire Aux Questions (FAQ)',
+    subtitle: 'Réponses claires et directes à vos questions courantes sur nos services',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Comment passer commande ?',
+        content: [
+          'Choisissez vos articles ou laissez-vous guider par notre conseiller IA Gemini. Ajoutez-les au panier, renseignez vos coordonnées et réglez en toute sécurité.'
+        ]
+      },
+      {
+        title: 'Quels sont les moyens de paiement acceptés ?',
+        content: [
+          'Carte Mada, Apple Pay, Visa, Mastercard, paiement en 4 fois sans frais avec Tamara et Tabby, et paiement à la livraison en Arabie Saoudite.'
+        ]
+      }
+    ]
+  },
+
+  contact: {
+    title: 'Contact et Service Client',
+    subtitle: 'Notre équipe est à votre disposition 24h/24 pour vous accompagner',
+    lastUpdated: 'Septembre 2025',
+    sections: [
+      {
+        title: 'Coordonnées Officielles',
+        content: [
+          'Domaine officiel : marahhanan.store (xn--mgblao3hjb.store)',
+          'E-mail support client : hanan132632@gmail.com',
+          'Horaires : Du samedi au jeudi, de 9h00 à 22h00 (Heure de La Mecque).'
+        ]
+      }
+    ]
+  }
+};
+
+export const POLICIES: Record<string, PolicyData> = POLICIES_AR;
+
+export function getPolicy(key: string, lang: Language = 'ar'): PolicyData {
+  if (lang === 'en' && POLICIES_EN[key]) return POLICIES_EN[key];
+  if (lang === 'fr' && POLICIES_FR[key]) return POLICIES_FR[key];
+  return POLICIES_AR[key] || POLICIES_AR.about;
+}

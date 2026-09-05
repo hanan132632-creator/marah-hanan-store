@@ -1,7 +1,18 @@
+export type Language = 'ar' | 'en' | 'fr';
+
+export interface LanguageConfig {
+  code: Language;
+  name: string;
+  nativeName: string;
+  flag: string;
+  dir: 'rtl' | 'ltr';
+}
+
 export interface Product {
   id: string;
   name: string;
-  nameEn: string;
+  nameEn?: string;
+  nameFr?: string;
   price: number;
   originalPrice?: number;
   rating: number;
@@ -9,12 +20,20 @@ export interface Product {
   category: 'beauty' | 'electronics' | 'home' | 'lifestyle' | 'gifts';
   image: string;
   secondaryImages?: string[];
-  badge?: 'الأكثر مبيعاً' | 'جديد الحزمة الثامنة' | 'خصم حصري' | 'توصية الذكاء الاصطناعي';
+  badge?: string;
+  badgeEn?: string;
+  badgeFr?: string;
   inStock: boolean;
   stockCount: number;
   description: string;
+  descriptionEn?: string;
+  descriptionFr?: string;
   specs: Record<string, string>;
+  specsEn?: Record<string, string>;
+  specsFr?: Record<string, string>;
   tags: string[];
+  tagsEn?: string[];
+  tagsFr?: string[];
   isFeatured?: boolean;
   isBestSeller?: boolean;
 }
