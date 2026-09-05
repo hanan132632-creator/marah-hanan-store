@@ -37,6 +37,7 @@
   ],
   "rewrites": [
     { "source": "/html/(.*)", "destination": "/html/$1" },
+    { "source": "/images/(.*)", "destination": "/images/$1" },
     { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/ads.txt", "destination": "/ads.txt" },

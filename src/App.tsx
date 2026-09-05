@@ -377,8 +377,15 @@ export default function App() {
                   {/* Article 1 */}
                   <a
                     href="/html/article-luxury-gifts-guide.html"
-                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-rose-300 transition-all space-y-3"
+                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-rose-300 transition-all space-y-3 flex flex-col"
                   >
+                    <div className="w-full h-40 rounded-xl overflow-hidden mb-1">
+                      <img
+                        src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80"
+                        alt="دليل الهدايا الفاخرة"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-bold text-rose-700 bg-rose-100/70 px-2.5 py-0.5 rounded-lg">
                         فن الإهداء
@@ -391,7 +398,7 @@ export default function App() {
                     <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
                       سيكولوجية الإهداء وأسرار التغليف الملكي ومعايير اختيار الهدايا التي تدوم في الذاكرة.
                     </p>
-                    <div className="text-xs font-bold text-rose-600 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
+                    <div className="pt-2 mt-auto text-xs font-bold text-rose-600 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
                       <span>قراءة الدليل كاملاً</span>
                       <ArrowLeft className="w-3 h-3" />
                     </div>
@@ -400,8 +407,15 @@ export default function App() {
                   {/* Article 2 */}
                   <a
                     href="/html/article-smart-ecommerce-guide.html"
-                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-emerald-300 transition-all space-y-3"
+                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-emerald-300 transition-all space-y-3 flex flex-col"
                   >
+                    <div className="w-full h-40 rounded-xl overflow-hidden mb-1">
+                      <img
+                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80"
+                        alt="دليل التسوق الإلكتروني الآمن"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-bold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-lg">
                         الأمان الرقمي
@@ -414,7 +428,7 @@ export default function App() {
                     <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
                       كيف تضمن حقوقك كمستهلك، تميز المتاجر المعتمدة، وتقتنص أفضل العروض دون مخاطر.
                     </p>
-                    <div className="text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
+                    <div className="pt-2 mt-auto text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
                       <span>قراءة الدليل كاملاً</span>
                       <ArrowLeft className="w-3 h-3" />
                     </div>
