@@ -1,3 +1,0 @@
-# Google AdSense ads.txt
-# مرح حنان ستور | xn--mgblao3hjb.store
-google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
