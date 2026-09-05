@@ -20,7 +20,8 @@ import {
   Search, 
   Globe, 
   ShoppingBag, 
-  Tag 
+  Tag,
+  ArrowLeft
 } from 'lucide-react';
 
 const CURRENCIES: Record<Currency, CurrencyConfig> = {
@@ -346,6 +347,78 @@ export default function App() {
                   <p className="text-xs text-stone-500 leading-relaxed">
                     استخدم كود <strong className="text-rose-600">HANAN10</strong> للحصول على خصم 10% فوري مع تغليف إهداء راقٍ.
                   </p>
+                </div>
+              </div>
+
+              {/* Editorial Guides & Articles Showcase */}
+              <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6 text-right">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-5">
+                  <div>
+                    <span className="text-[11px] font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100">
+                      مقالات وأدلة تسوق حصرية
+                    </span>
+                    <h3 className="text-xl sm:text-2xl font-black text-stone-900 mt-2">
+                      دليل مرح حنان ستور للأناقة والتسوق الآمن
+                    </h3>
+                    <p className="text-stone-500 text-xs mt-1">
+                      نشارككم أحدث الرؤى والأسرار لاختيار الهدايا الفاخرة والتسوق الإلكتروني الموثوق
+                    </p>
+                  </div>
+                  <a
+                    href="/html/sitemap.html"
+                    className="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1 shrink-0"
+                  >
+                    <span>فهرس الأدلة والصفحات</span>
+                    <ArrowLeft className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Article 1 */}
+                  <a
+                    href="/html/article-luxury-gifts-guide.html"
+                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-rose-300 transition-all space-y-3"
+                  >
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-bold text-rose-700 bg-rose-100/70 px-2.5 py-0.5 rounded-lg">
+                        فن الإهداء
+                      </span>
+                      <span className="text-stone-400 text-[11px]">قراءة 5 دقائق</span>
+                    </div>
+                    <h4 className="font-black text-stone-900 group-hover:text-rose-600 transition text-base">
+                      دليل الهدايا الفاخرة: فن اختيار الهدية المثالية وقواعد الإتيكيت العصري
+                    </h4>
+                    <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
+                      سيكولوجية الإهداء وأسرار التغليف الملكي ومعايير اختيار الهدايا التي تدوم في الذاكرة.
+                    </p>
+                    <div className="text-xs font-bold text-rose-600 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
+                      <span>قراءة الدليل كاملاً</span>
+                      <ArrowLeft className="w-3 h-3" />
+                    </div>
+                  </a>
+
+                  {/* Article 2 */}
+                  <a
+                    href="/html/article-smart-ecommerce-guide.html"
+                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-emerald-300 transition-all space-y-3"
+                  >
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="font-bold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-lg">
+                        الأمان الرقمي
+                      </span>
+                      <span className="text-stone-400 text-[11px]">قراءة 6 دقائق</span>
+                    </div>
+                    <h4 className="font-black text-stone-900 group-hover:text-emerald-700 transition text-base">
+                      دليل التسوق الإلكتروني الذكي والآمن 2026: أسرار حماية البيانات وضمان الجودة
+                    </h4>
+                    <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
+                      كيف تضمن حقوقك كمستهلك، تميز المتاجر المعتمدة، وتقتنص أفضل العروض دون مخاطر.
+                    </p>
+                    <div className="text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
+                      <span>قراءة الدليل كاملاً</span>
+                      <ArrowLeft className="w-3 h-3" />
+                    </div>
+                  </a>
                 </div>
               </div>
             </section>

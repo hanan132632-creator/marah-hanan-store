@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خريطة الموقع (Sitemap) | متجر مرح حنان ستور</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>body { font-family: 'Cairo', sans-serif; }</style>
+</head>
+<body class="bg-stone-50 text-stone-900 min-h-screen flex flex-col">
+
+  <header class="bg-white border-b border-stone-200 py-4 px-6 sticky top-0 z-30">
+    <div class="max-w-5xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="w-9 h-9 rounded-xl bg-rose-600 text-white font-black flex items-center justify-center">م</div>
+        <span class="font-black text-lg text-stone-900">مرح حنان ستور</span>
+      </a>
+      <a href="index.html" class="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1">
+        <span>العودة للمتجر</span>
+        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-12 flex-1 space-y-8 text-right">
+    <div class="border-b pb-6">
+      <div class="flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1 rounded-full">دليل الروابط والفهرسة</span>
+          <h1 class="text-3xl font-black text-stone-900 mt-2">خريطة الموقع الرسمية (Site Map)</h1>
+          <p class="text-stone-500 text-xs mt-1">الدومين الرسمي: مرححنان.store (xn--mgblao3hjb.store)</p>
+        </div>
+        <a href="/sitemap.xml" target="_blank" class="bg-stone-900 hover:bg-rose-600 text-white text-xs font-bold px-3 py-2 rounded-xl transition-colors flex items-center gap-1.5">
+          <i data-lucide="file-code" class="w-4 h-4"></i>
+          <span>ملف sitemap.xml</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sitemap Sections Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm">
+      
+      <!-- Store Sections -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
+        <h2 class="font-bold text-base text-stone-900 flex items-center gap-2 border-b pb-2">
+          <i data-lucide="home" class="w-4 h-4 text-rose-600"></i>
+          <span>أقسام المتجر والتسوق</span>
+        </h2>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="index.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>الصفحة الرئيسية للمتجر</span>
+              <span class="text-stone-400 font-mono">/html/index.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#products-section" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>كتالوج المنتجات الحصرية</span>
+              <span class="text-stone-400 font-mono">#products</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>سلة التسوق الذكية</span>
+              <span class="text-stone-400 font-mono">Cart Drawer</span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>المستشار الذكي (Gemini AI Suite)</span>
+              <span class="text-amber-500 font-bold">AI Suite</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Policy Pages -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
+        <h2 class="font-bold text-base text-stone-900 flex items-center gap-2 border-b pb-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
+          <span>صفحات السياسات المعتمدة</span>
+        </h2>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="shipping.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>سياسة الشحن والتوصيل السريع</span>
+              <span class="text-stone-400 font-mono">shipping.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="refund.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>سياسة الاستبدال والاسترجاع والضمان الذهبي</span>
+              <span class="text-stone-400 font-mono">refund.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="privacy.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>سياسة الخصوصية وحماية البيانات (PDPL)</span>
+              <span class="text-stone-400 font-mono">privacy.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="terms.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>الشروط والأحكام العامة</span>
+              <span class="text-stone-400 font-mono">terms.html</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- About & Support -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
+        <h2 class="font-bold text-base text-stone-900 flex items-center gap-2 border-b pb-2">
+          <i data-lucide="help-circle" class="w-4 h-4 text-amber-500"></i>
+          <span>من نحن والدعم الفني</span>
+        </h2>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="about.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>من نحن وقصة المتجر</span>
+              <span class="text-stone-400 font-mono">about.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="faq.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>الأسئلة الشائعة وإجاباتها</span>
+              <span class="text-stone-400 font-mono">faq.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="contact.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>اتصل بنا ونموذج المراسلة المباشر</span>
+              <span class="text-stone-400 font-mono">contact.html</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Articles & Guides -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
+        <h2 class="font-bold text-base text-stone-900 flex items-center gap-2 border-b pb-2">
+          <i data-lucide="book-open" class="w-4 h-4 text-rose-600"></i>
+          <span>المقالات التثقيفية والأدلة الإرشادية</span>
+        </h2>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="article-luxury-gifts-guide.html" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>دليل الهدايا الفاخرة وفن الإهداء</span>
+              <span class="text-stone-400 font-mono">article-luxury-gifts-guide.html</span>
+            </a>
+          </li>
+          <li>
+            <a href="article-smart-ecommerce-guide.html" class="font-bold text-stone-800 hover:text-emerald-700 flex items-center justify-between">
+              <span>دليل التسوق الإلكتروني الذكي والآمن 2026</span>
+              <span class="text-stone-400 font-mono">article-smart-ecommerce-guide.html</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Technical & SEO Files -->
+      <div class="bg-white p-6 rounded-2xl border border-stone-200 space-y-4">
+        <h2 class="font-bold text-base text-stone-900 flex items-center gap-2 border-b pb-2">
+          <i data-lucide="globe" class="w-4 h-4 text-sky-600"></i>
+          <span>ملفات الأرشفة ومحركات البحث</span>
+        </h2>
+        <ul class="space-y-2.5 text-xs">
+          <li>
+            <a href="/sitemap.xml" target="_blank" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>ملف خريطة الموقع لمحركات البحث</span>
+              <span class="text-rose-600 font-mono font-bold">/sitemap.xml</span>
+            </a>
+          </li>
+          <li>
+            <a href="/robots.txt" target="_blank" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>ملف توجيه العناكب والروبوتات</span>
+              <span class="text-rose-600 font-mono font-bold">/robots.txt</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hanan132632@gmail.com" class="font-bold text-stone-800 hover:text-rose-600 flex items-center justify-between">
+              <span>البريد الإلكتروني للإدارة</span>
+              <span class="text-stone-500 font-mono">hanan132632@gmail.com</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-400 py-6 text-center text-xs">
+    <p>جميع الحقوق محفوظة © متجر مرح حنان ستور • مرححنان.store (xn--mgblao3hjb.store)</p>
+  </footer>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

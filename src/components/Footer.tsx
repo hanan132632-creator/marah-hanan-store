@@ -156,6 +156,24 @@ export const Footer: React.FC<FooterProps> = ({
                   من نحن - قصة مرح حنان ستور
                 </button>
               </li>
+              <li className="pt-1 border-t border-stone-850">
+                <a
+                  href="/html/article-luxury-gifts-guide.html"
+                  className="hover:text-amber-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                >
+                  <FileText className="w-3 h-3 text-rose-500" />
+                  <span>دليل الهدايا الفاخرة وفن الإهداء</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/html/article-smart-ecommerce-guide.html"
+                  className="hover:text-emerald-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                >
+                  <FileText className="w-3 h-3 text-emerald-500" />
+                  <span>دليل التسوق الإلكتروني الآمن 2026</span>
+                </a>
+              </li>
             </ul>
           </div>
 

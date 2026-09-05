@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="50%" stop-color="#be123c"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="128" ry="128" fill="url(#bgGrad)" />
+  <rect x="24" y="24" width="464" height="464" rx="128" ry="128" fill="url(#glowGrad)" />
+  <g filter="url(#shadow)" fill="#ffffff">
+    <path d="M 256 110 C 200 110 156 154 156 210 C 156 250 180 284 214 299 L 214 402 C 214 413 223 422 234 422 C 245 422 254 413 254 402 L 254 308 C 298 299 332 260 332 210 C 332 154 288 110 256 110 Z M 256 160 C 283 160 302 182 302 210 C 302 238 283 260 256 260 C 229 260 206 238 206 210 C 206 182 229 160 256 160 Z" />
+    <path d="M 370 120 Q 380 135 395 145 Q 380 155 370 170 Q 360 155 345 145 Q 360 135 370 120 Z" fill="#fde047" />
+  </g>
+</svg>
