@@ -1,0 +1,9 @@
+# ==============================================================================
+# Google AdSense Authorized Digital Sellers (ads.txt)
+# متجر مرح حنان ستور | Marah Hanan Store
+# Domain: xn--mgblao3hjb.store (مرححنان.store)
+# Contact: hanan132632@gmail.com
+# ==============================================================================
+# 
+# معتمد لدى جوجل ادسنس (Google AdSense Certified Entry)
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,11 @@
+/* TEAM */
+  Owner & Management: Hanan (hanan132632@gmail.com)
+  Store Name: مرح حنان ستور | Marah Hanan Store
+  Domain: مرححنان.store (xn--mgblao3hjb.store)
+  Location: Riyadh, Kingdom of Saudi Arabia
+
+/* SITE */
+  Standards: HTML5, CSS3, W3C, RFC 9116, Schema.org
+  Architecture: Ultra-Fast Suite v8 (Node.js, Express, Vite, React 19, Tailwind CSS)
+  AI Model: Google Gemini API (gemini-3.6-flash)
+  Language: Arabic (RTL)

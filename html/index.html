@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مرح حنان ستور | Marah Hanan Store - الحزمة الثامنة الفائقة السرعة</title>
+  <meta name="description" content="متجر مرح حنان ستور على الدومين مرححنان.store (xn--mgblao3hjb.store) - تجربة تسوق ذكية وفائقة السرعة مع أدوات الذكاء الاصطناعي وصفحات السياسات كاملة.">
+  <meta property="og:title" content="مرح حنان ستور | Marah Hanan Store">
+  <meta property="og:description" content="الحزمة الثامنة الفائقة السرعة - متجر ذكي وأدوات ذكاء اصطناعي">
+  <meta name="theme-color" content="#e11d48">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+  </style>
+</head>
+<body class="bg-stone-50 text-stone-900 selection:bg-rose-500 selection:text-white min-h-screen flex flex-col">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-stone-950 text-stone-200 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="bg-rose-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">الحزمة الثامنة</span>
+        <span>🎉 شحن مجاني فوري للطلبات فوق 200 ر.س • كود الخصم: <strong class="text-amber-400 font-mono">HANAN10</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-[11px] text-stone-400">
+        <span class="font-mono text-amber-300">مرححنان.store (xn--mgblao3hjb.store)</span>
+        <a href="contact.html" class="hover:text-white transition-colors">الدعم الفني: hanan132632@gmail.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20 gap-4">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-rose-600 to-amber-500 flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-rose-600/20">
+            م
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-xl text-stone-900 tracking-tight">مرح حنان</span>
+              <span class="bg-stone-900 text-amber-300 text-[10px] font-bold px-1.5 py-0.5 rounded">ستور</span>
+            </div>
+            <p class="text-[11px] text-stone-500 font-medium">مرححنان.store • الحزمة الثامنة</p>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="hidden md:flex flex-1 max-w-md relative">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="ابحث عن العطور، المباخر، مستلزمات العناية، الهدايا..."
+            oninput="handleSearch(this.value)"
+            class="w-full bg-stone-100 border border-stone-200 rounded-2xl pl-4 pr-10 py-2.5 text-xs text-stone-900 focus:outline-none focus:bg-white focus:border-rose-500 transition-all"
+          >
+          <i data-lucide="search" class="w-4 h-4 text-stone-400 absolute right-3.5 top-3"></i>
+        </div>
+
+        <!-- Action Controls -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- AI Suite Button -->
+          <button onclick="toggleAIModal()" class="flex items-center gap-1.5 bg-gradient-to-r from-rose-500/10 to-amber-500/10 hover:from-rose-500/20 hover:to-amber-500/20 text-rose-700 px-3.5 py-2 rounded-xl border border-rose-200 text-xs font-bold transition-all shadow-2xs">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-500"></i>
+            <span class="hidden sm:inline">أدوات الذكاء الاصطناعي</span>
+            <span class="sm:hidden">الذكاء</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button onclick="toggleCart()" class="relative flex items-center gap-2 bg-stone-900 hover:bg-rose-600 text-white px-4 py-2.5 rounded-xl font-bold text-xs transition-colors shadow-sm">
+            <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-300"></i>
+            <span class="hidden sm:inline">السلة</span>
+            <span id="cartBadge" class="bg-rose-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold">0</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Navigation Bar -->
+      <nav class="flex items-center justify-between border-t border-stone-100 py-2.5 overflow-x-auto text-xs font-bold text-stone-600 scrollbar-none">
+        <div class="flex items-center gap-4">
+          <a href="index.html" class="text-rose-600">الرئيسية</a>
+          <button onclick="filterCategory('all')" class="hover:text-rose-600">كافة المنتجات</button>
+          <button onclick="filterCategory('home')" class="hover:text-rose-600">المنزل والمباخر</button>
+          <button onclick="filterCategory('beauty')" class="hover:text-rose-600">العناية والجمال</button>
+          <button onclick="filterCategory('gifts')" class="hover:text-rose-600">الهدايا والأطقم</button>
+          <button onclick="filterCategory('electronics')" class="hover:text-rose-600">الإلكترونيات الذكية</button>
+        </div>
+        <div class="flex items-center gap-3 text-stone-400 pr-4">
+          <a href="shipping.html" class="hover:text-stone-800">الشحن</a>
+          <a href="refund.html" class="hover:text-stone-800">الاسترجاع</a>
+          <a href="privacy.html" class="hover:text-stone-800">الخصوصية</a>
+          <a href="terms.html" class="hover:text-stone-800">الشروط</a>
+          <a href="about.html" class="hover:text-stone-800">من نحن</a>
+          <a href="faq.html" class="hover:text-stone-800">الأسئلة</a>
+          <a href="contact.html" class="hover:text-stone-800">اتصل بنا</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-b from-stone-900 via-stone-900 to-stone-950 text-white py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+      <div class="lg:col-span-7 space-y-5 text-right">
+        <div class="inline-flex items-center gap-2 bg-rose-500/20 border border-rose-500/30 text-rose-300 text-xs font-bold px-3.5 py-1.5 rounded-full">
+          <i data-lucide="zap" class="w-4 h-4 text-amber-400 fill-amber-400"></i>
+          <span>حزمة السرعة الفائقة (Ultra-Fast Suite v8)</span>
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black leading-tight">
+          متجر مرح حنان ستور <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-400 via-amber-300 to-rose-300">
+            فخامة التسوق الذكي وتقنيات الذكاء الاصطناعي
+          </span>
+        </h1>
+        <p class="text-sm sm:text-base text-stone-300 leading-relaxed max-w-xl">
+          أهلاً بكم في متجر مرح حنان على الدومين الرسمي <strong class="text-amber-300 font-mono">مرححنان.store (xn--mgblao3hjb.store)</strong>. منتجات حصرية، شحن سريع 24-48 ساعة، ضمان ذهبي، وأدوات ذكاء اصطناعي لاختيار هداياك.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 pt-2">
+          <a href="#products-section" class="bg-rose-600 hover:bg-rose-500 text-white font-black px-6 py-3.5 rounded-xl shadow-lg shadow-rose-600/30 text-xs sm:text-sm flex items-center gap-2 transition-all">
+            <span>تسوق المنتجات الآن</span>
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </a>
+          <button onclick="toggleAIModal()" class="bg-white/10 hover:bg-white/20 text-stone-200 border border-white/20 font-bold px-5 py-3.5 rounded-xl text-xs sm:text-sm flex items-center gap-2 transition-all">
+            <i data-lucide="sparkles" class="w-4 h-4 text-amber-400"></i>
+            <span>المستشار الذكي بالذكاء الاصطناعي</span>
+          </button>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-stone-800">
+          <img src="https://images.unsplash.com/photo-1547887537-6158d64c35b3?auto=format&fit=crop&w=800&q=80" alt="مرح حنان ستور" class="w-full h-80 object-cover opacity-90">
+          <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent"></div>
+          <div class="absolute bottom-4 right-4 left-4 p-4 bg-stone-900/90 backdrop-blur-md rounded-2xl border border-stone-700 flex items-center justify-between">
+            <div>
+              <span class="text-amber-400 font-bold text-xs">كود الخصم المعتمد:</span>
+              <p class="font-mono text-white font-black text-lg">HANAN10</p>
+            </div>
+            <span class="bg-rose-600 text-white text-xs font-bold px-3 py-1.5 rounded-lg">خصم 10% فوري</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Catalog Section -->
+  <main id="products-section" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1">
+    
+    <!-- Section Title & Filter Tabs -->
+    <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+      <div>
+        <h2 class="text-2xl font-black text-stone-900 flex items-center gap-2">
+          <span>كتالوج المنتجات الحصرية</span>
+          <span class="bg-rose-100 text-rose-700 text-xs font-bold px-2.5 py-0.5 rounded-full">الحزمة الثامنة</span>
+        </h2>
+        <p class="text-xs text-stone-500 mt-1">تصفح تشكيلة مرح حنان ستور المعتمدة مع الضمان الذهبي والشحن السريع</p>
+      </div>
+      <div class="flex flex-wrap gap-2 text-xs font-bold" id="categoryButtons">
+        <button onclick="filterCategory('all')" class="cat-btn active bg-stone-900 text-white px-4 py-2 rounded-xl">الكل</button>
+        <button onclick="filterCategory('home')" class="cat-btn bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 px-4 py-2 rounded-xl">المنزل والمباخر</button>
+        <button onclick="filterCategory('beauty')" class="cat-btn bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 px-4 py-2 rounded-xl">العناية والجمال</button>
+        <button onclick="filterCategory('gifts')" class="cat-btn bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 px-4 py-2 rounded-xl">الهدايا الفاخرة</button>
+        <button onclick="filterCategory('electronics')" class="cat-btn bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 px-4 py-2 rounded-xl">الإلكترونيات</button>
+      </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="productsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Generated via JS -->
+    </div>
+
+  </main>
+
+  <!-- Cart Drawer Modal -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 bg-stone-950/70 backdrop-blur-sm hidden">
+    <div class="absolute inset-y-0 left-0 max-w-full flex">
+      <div class="w-screen max-w-md bg-white shadow-2xl flex flex-col text-right">
+        <div class="p-4 border-b border-stone-200 flex items-center justify-between bg-stone-50">
+          <button onclick="toggleCart()" class="p-2 rounded-xl hover:bg-stone-200 text-stone-500">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+          <div class="flex items-center gap-2">
+            <h3 class="font-black text-stone-900 text-lg">سلة التسوق</h3>
+            <span id="drawerCartCount" class="bg-rose-100 text-rose-700 text-xs font-bold px-2 py-0.5 rounded-full">0</span>
+          </div>
+        </div>
+        
+        <!-- Free shipping notice -->
+        <div class="bg-amber-50 p-3 border-b border-amber-200/60 text-xs flex items-center gap-2 text-stone-700">
+          <i data-lucide="truck" class="w-4 h-4 text-rose-600"></i>
+          <span>شحن مجاني لكافة مدن المملكة للطلبات الأكثر من 200 ر.س</span>
+        </div>
+
+        <!-- Items container -->
+        <div id="cartItemsList" class="flex-1 overflow-y-auto p-4 space-y-3 custom-scroll">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Footer -->
+        <div class="p-4 border-t border-stone-200 bg-stone-50 space-y-3">
+          <div class="flex justify-between text-sm font-bold text-stone-800">
+            <span>المجموع الإجمالي:</span>
+            <span id="cartTotalPrice" class="text-rose-600 text-lg">0 ر.س</span>
+          </div>
+          <button onclick="alert('شكراً لتسوقك من متجر مرح حنان ستور! سيتم تحويلك لإتمام الطلب فوراً.')" class="w-full bg-rose-600 hover:bg-rose-500 text-white font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-rose-600/30 text-sm">
+            <span>متابعة إتمام الطلب والدفع</span>
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI Modal -->
+  <div id="aiModal" class="fixed inset-0 z-50 bg-stone-950/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 text-right space-y-4 shadow-2xl border border-stone-200 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b pb-4">
+        <button onclick="toggleAIModal()" class="p-2 rounded-full hover:bg-stone-100 text-stone-400">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+        <div class="flex items-center gap-2">
+          <span class="bg-rose-100 text-rose-700 text-[11px] font-bold px-2 py-0.5 rounded">Gemini AI</span>
+          <h3 class="text-lg font-black text-stone-900">المستشار الذكي وموفق الهدايا</h3>
+        </div>
+      </div>
+      <div class="space-y-3 text-xs">
+        <p class="text-stone-600">اختر نوع الاستشارة الذكية للحصول على توصية فورية من كتالوج الحزمة الثامنة:</p>
+        <div class="grid grid-cols-2 gap-2">
+          <button onclick="askAI('أفضل هدية لمناسبة خاصة')" class="p-3 bg-stone-50 hover:bg-rose-50 border rounded-xl font-bold text-stone-800 text-right">🎁 اقتراح هدية راقية لمناسبة خاصة</button>
+          <button onclick="askAI('أفضل مبخرة ذكية')" class="p-3 bg-stone-50 hover:bg-rose-50 border rounded-xl font-bold text-stone-800 text-right">💨 أفضل مبخرة إلكترونية للسيارة والمنزل</button>
+          <button onclick="askAI('روتين العناية والنضارة')" class="p-3 bg-stone-50 hover:bg-rose-50 border rounded-xl font-bold text-stone-800 text-right">✨ روتين العناية والجمال الأكثر طلباً</button>
+          <button onclick="askAI('المنتجات الأكثر مبيعاً')" class="p-3 bg-stone-50 hover:bg-rose-50 border rounded-xl font-bold text-stone-800 text-right">🔥 الأكثر مبيعاً في الحزمة الثامنة</button>
+        </div>
+        <div id="aiOutput" class="bg-rose-50/50 p-4 rounded-2xl border border-rose-200 text-stone-800 leading-relaxed hidden"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-stone-950 text-stone-300 border-t border-stone-800 text-right mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-lg bg-rose-600 flex items-center justify-center text-white font-bold">م</div>
+            <span class="text-lg font-black text-white">مرح حنان ستور</span>
+          </div>
+          <p class="text-xs text-stone-400 leading-relaxed">
+            المتجر الذكي المعتمد على الدومين <span class="text-amber-300 font-mono">مرححنان.store (xn--mgblao3hjb.store)</span> مع الحزمة الثامنة الفائقة السرعة.
+          </p>
+          <p class="text-xs text-stone-400">خدمة العملاء: <a href="mailto:hanan132632@gmail.com" class="text-rose-400 font-bold hover:underline font-mono">hanan132632@gmail.com</a></p>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-sm font-bold text-white border-r-2 border-rose-500 pr-2">صفحات السياسات</h4>
+          <ul class="space-y-1.5 text-xs text-stone-400">
+            <li><a href="shipping.html" class="hover:text-rose-400">الشحن والتوصيل السريع</a></li>
+            <li><a href="refund.html" class="hover:text-rose-400">الاسترجاع والضمان الذهبي</a></li>
+            <li><a href="privacy.html" class="hover:text-rose-400">سياسة الخصوصية وسرية البيانات</a></li>
+            <li><a href="terms.html" class="hover:text-rose-400">الشروط والأحكام العامة</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-sm font-bold text-white border-r-2 border-amber-500 pr-2">خدمات المتجر</h4>
+          <ul class="space-y-1.5 text-xs text-stone-400">
+            <li><a href="about.html" class="hover:text-rose-400">من نحن وقصة مرح حنان</a></li>
+            <li><a href="faq.html" class="hover:text-rose-400">الأسئلة الشائعة</a></li>
+            <li><a href="contact.html" class="hover:text-rose-400">اتصل بنا وخدمة الدعم</a></li>
+            <li><a href="javascript:toggleAIModal()" class="text-amber-300 hover:text-amber-200 font-bold">المستشار الذكي (Gemini)</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <h4 class="text-sm font-bold text-white border-r-2 border-emerald-500 pr-2">وسائل الدفع الآمنة</h4>
+          <div class="grid grid-cols-2 gap-2 text-[11px] font-bold text-stone-300">
+            <div class="bg-stone-900 border border-stone-800 p-2 rounded text-center">مدى Mada</div>
+            <div class="bg-stone-900 border border-stone-800 p-2 rounded text-center">Apple Pay</div>
+            <div class="bg-stone-900 border border-stone-800 p-2 rounded text-center">تمارا Tamara</div>
+            <div class="bg-stone-900 border border-stone-800 p-2 rounded text-center">تابي Tabby</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-stone-900 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-2">
+        <p>جميع الحقوق محفوظة © 2025 متجر مرح حنان ستور • مرححنان.store (xn--mgblao3hjb.store)</p>
+        <p class="font-mono text-stone-400">Ultra-Fast Suite v8 • HTML Version</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- App Script -->
+  <script>
+    const PRODUCTS = [
+      { id: 'mh-01', name: 'المبخرة الذكية الإلكترونية المحمولة', category: 'home', price: 189, originalPrice: 249, rating: 4.9, image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80', badge: 'الأكثر مبيعاً' },
+      { id: 'mh-02', name: 'طقم هدايا حنان المخملي الفاخر', category: 'gifts', price: 299, originalPrice: 380, rating: 5.0, image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=600&q=80', badge: 'إصدار حصري' },
+      { id: 'mh-03', name: 'عطر مرح الخاص - مسك العود الملكي', category: 'beauty', price: 245, originalPrice: 310, rating: 4.8, image: 'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=600&q=80', badge: 'عطر الموسم' },
+      { id: 'mh-04', name: 'موزع العطور والزيوت التراسونيك الذكي', category: 'home', price: 159, originalPrice: 199, rating: 4.7, image: 'https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80', badge: 'إضاءة محيطية' },
+      { id: 'mh-05', name: 'سماعات البلوتوث الذكية بخاصية العزل', category: 'electronics', price: 219, originalPrice: 279, rating: 4.9, image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80', badge: 'صوت Hi-Fi' },
+      { id: 'mh-06', name: 'سيروم الهيالورونيك والذهب للنضارة', category: 'beauty', price: 135, originalPrice: 175, rating: 4.8, image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80', badge: 'طبيعي 100%' },
+      { id: 'mh-07', name: 'طقم القهوة المختصة V60 الكريستالي', category: 'home', price: 195, originalPrice: 245, rating: 4.9, image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80', badge: 'عشاق القهوة' },
+      { id: 'mh-08', name: 'باكج إهداء مرح حنان الملكي الشامل', category: 'gifts', price: 449, originalPrice: 590, rating: 5.0, image: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=600&q=80', badge: 'VIP' },
+    ];
+
+    let cart = [];
+    let currentCategory = 'all';
+
+    function renderProducts() {
+      const grid = document.getElementById('productsGrid');
+      grid.innerHTML = '';
+      const filtered = currentCategory === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === currentCategory);
+
+      filtered.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-2xl p-4 border border-stone-200 shadow-2xs hover:shadow-md transition-all flex flex-col justify-between';
+        card.innerHTML = `
+          <div>
+            <div class="relative aspect-square rounded-xl overflow-hidden mb-3 bg-stone-100">
+              <img src="${p.image}" alt="${p.name}" class="w-full h-full object-cover">
+              ${p.badge ? `<span class="absolute top-2 right-2 bg-stone-900 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded shadow">${p.badge}</span>` : ''}
+            </div>
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-1">
+              <span>★</span><span class="font-bold text-stone-800">${p.rating}</span>
+            </div>
+            <h3 class="font-bold text-xs sm:text-sm text-stone-900 line-clamp-2 mb-2">${p.name}</h3>
+          </div>
+          <div class="pt-3 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <span class="font-black text-rose-600 text-base">${p.price} ر.س</span>
+              ${p.originalPrice ? `<s class="text-stone-400 text-xs block">${p.originalPrice} ر.س</s>` : ''}
+            </div>
+            <button onclick="addToCart('${p.id}')" class="bg-stone-900 hover:bg-rose-600 text-white font-bold p-2.5 rounded-xl transition-colors">
+              <i data-lucide="shopping-bag" class="w-4 h-4"></i>
+            </button>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      lucide.createIcons();
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.className = 'cat-btn bg-white text-stone-700 border border-stone-200 hover:bg-stone-100 px-4 py-2 rounded-xl';
+      });
+      event.target.className = 'cat-btn active bg-stone-900 text-white px-4 py-2 rounded-xl';
+      renderProducts();
+    }
+
+    function addToCart(productId) {
+      const prod = PRODUCTS.find(p => p.id === productId);
+      if (!prod) return;
+      const existing = cart.find(i => i.id === productId);
+      if (existing) {
+        existing.qty++;
+      } else {
+        cart.push({ ...prod, qty: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((s, i) => s + i.qty, 0);
+      const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
+      document.getElementById('cartBadge').innerText = count;
+      document.getElementById('drawerCartCount').innerText = count;
+      document.getElementById('cartTotalPrice').innerText = `${total} ر.س`;
+
+      const list = document.getElementById('cartItemsList');
+      if (cart.length === 0) {
+        list.innerHTML = `<div class="text-center py-12 text-stone-400 text-xs">السلة فارغة حالياً</div>`;
+        return;
+      }
+      list.innerHTML = cart.map(i => `
+        <div class="flex items-center justify-between p-2.5 bg-stone-50 rounded-xl border border-stone-200 text-xs">
+          <div class="flex items-center gap-2">
+            <img src="${i.image}" class="w-12 h-12 rounded-lg object-cover">
+            <div>
+              <div class="font-bold text-stone-900">${i.name}</div>
+              <div class="text-rose-600 font-bold">${i.price * i.qty} ر.س (${i.qty}×)</div>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cartDrawer');
+      drawer.classList.toggle('hidden');
+    }
+
+    function toggleAIModal() {
+      const modal = document.getElementById('aiModal');
+      modal.classList.toggle('hidden');
+    }
+
+    function askAI(topic) {
+      const out = document.getElementById('aiOutput');
+      out.classList.remove('hidden');
+      out.innerHTML = `جاري استخراج توصية الذكاء الاصطناعي لـ "${topic}" من كتالوج مرح حنان ستور...`;
+      setTimeout(() => {
+        out.innerHTML = `✨ <strong>توصية المستشار الذكي (Gemini):</strong><br>
+        ننصحك باختيار <strong>طقم هدايا حنان المخملي</strong> مع <strong>المبخرة الذكية الإلكترونية</strong>، كأكثر الخيارات تكاملاً وفخامة مع الضمان الذهبي والشحن السريع المجاني. كود الخصم الفعال: <strong>HANAN10</strong>.`;
+      }, 700);
+    }
+
+    // Initialize
+    renderProducts();
+    lucide.createIcons();
+  </script>
+</body>
+</html>

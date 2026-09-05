@@ -1,0 +1,12 @@
+# Google AdSense Crawler
+User-agent: Mediapartners-Google
+Allow: /
+
+# General Search Engines
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://xn--mgblao3hjb.store/sitemap.xml
+Sitemap: https://xn--mgblao3hjb.store/html/sitemap.xml
+

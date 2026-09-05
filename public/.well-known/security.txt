@@ -1,0 +1,6 @@
+Contact: mailto:hanan132632@gmail.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: ar, en
+Canonical: https://xn--mgblao3hjb.store/.well-known/security.txt
+Policy: https://xn--mgblao3hjb.store/html/privacy.html
+Hiring: https://xn--mgblao3hjb.store/html/about.html

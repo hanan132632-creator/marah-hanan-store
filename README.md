@@ -1,11 +1,76 @@
-<div align="center">
+# مرح حنان ستور | Marah Hanan Store
+> متجر إلكتروني ذكي فائق السرعة على النطاق الرسمي **xn--mgblao3hjb.store** (**مرححنان.store**) مدعوم بالذكاء الاصطناعي ومجهز لمعايير Google AdSense و SEO العالمية.
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+---
 
-  <h1>Built with AI Studio</h2>
+## 🌟 مميزات المشروع (Key Features)
+- **منصة تسوق متكاملة**: واجهة مستخدم حديثة وتفاعلية وسريعة جداً مبنية بأحدث تقنيات React 19 و Tailwind CSS.
+- **مساعد الذكاء الاصطناعي (Gemini AI)**: استشارات ذكية لتنسيق الهدايا والموضة والإلكترونيات عبر Gemini API.
+- **جاهزية Google AdSense**:
+  - ملف الناشرين الرقميين المعتمدين: `/ads.txt`
+  - توجيه زاحف أدسنس (`Mediapartners-Google`) في `/robots.txt`
+  - سياسة الخصوصية المتوافقة مع متطلبات كوكيز إعلانات Google.
+- **معايير محركات البحث العالمية (SEO & Discovery)**:
+  - خريطة الموقع القياسية: `/sitemap.xml`
+  - ملف توجيه العناكب: `/robots.txt`
+  - بيانات Schema.org JSON-LD المنظمة (`OnlineStore`).
+  - الأيقونة العالمية والمانيفست: `/favicon.ico`, `/favicon.svg`, `/site.webmanifest`
+  - ملف الأمان العالمي (RFC 9116): `/.well-known/security.txt`
+- **حزمة صفحات السياسات القانونية المستقلة (`/html`)**:
+  - سياسة الشحن والتوصيل (`shipping.html`)
+  - سياسة الاسترجاع والضمان الذهبي (`refund.html`)
+  - سياسة الخصوصية وحماية البيانات (`privacy.html`)
+  - الشروط والأحكام العامة (`terms.html`)
+  - من نحن وقصة المتجر (`about.html`)
+  - الأسئلة الشائعة (`faq.html`)
+  - اتصل بنا والدعم المباشر (`contact.html`)
+  - خريطة الموقع المرئية (`sitemap.html`)
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+---
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 🚀 التشغيل والتطوير المحلي (Local Development)
 
-</div>
+### المتطلبات الأساسية
+- Node.js (v18 فما فوق)
+- npm
+
+### خطوات التثبيت والتشغيل
+```bash
+# تثبيت الحزم والمكتبات
+npm install
+
+# تشغيل خادم التطوير
+npm run dev
+```
+سيعمل التطبيق افتراضياً على الرابط: `http://localhost:3000`
+
+### بناء النسخة الإنتاجية (Production Build)
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 📁 هيكل الملفات الرئيسي
+```text
+├── public/                 # الملفات العامة لمحركات البحث والخدمات العالمية
+│   ├── ads.txt             # ملف Google AdSense
+│   ├── robots.txt          # ملف العناكب وفهرسة محركات البحث
+│   ├── sitemap.xml         # خريطة الموقع لمحركات البحث
+│   ├── favicon.svg/.ico    # الأيقونة الرسمية للمتجر
+│   ├── site.webmanifest    # ملف تطبيق الويب PWA
+│   ├── browserconfig.xml   # ملف مايكروسوفت ويندوز
+│   ├── humans.txt          # توثيق فريق العمل والمعايير
+│   └── .well-known/        # معايير الأمان الدولية (security.txt)
+├── html/                   # صفحات HTML الثابتة المستقلة والسياسات
+├── src/                    # كود تطبيق React والمكونات والواجهات
+├── server.ts               # خادم Express ومسارات API والخدمات
+└── package.json            # تبعيات المشروع وأوامر البناء
+```
+
+---
+
+## 📧 الدعم الفني والتواصل
+- **البريد الإلكتروني للإدارة**: `hanan132632@gmail.com`
+- **الدومين المعتمد**: `https://xn--mgblao3hjb.store`

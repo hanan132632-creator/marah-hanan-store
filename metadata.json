@@ -1,0 +1,6 @@
+{
+  "name": "مرح حنان ستور | Marah Hanan Store",
+  "description": "متجر إلكتروني ذكي فائق السرعة على النطاق xn--mgblao3hjb.store (مرححنان.store) مع أدوات ذكاء اصطناعي وتجربة تسوق متكاملة وصفحات السياسات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
