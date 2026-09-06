@@ -30,6 +30,16 @@ function getGeminiClient(): GoogleGenAI | null {
 // Serve standalone static HTML folder (/html)
 app.use('/html', express.static(path.join(process.cwd(), 'public', 'html')));
 
+// Redirect any legacy /404.html requests to homepage
+app.get(["/404.html", "/html/404.html"], (_req, res) => {
+  res.redirect(301, "/");
+});
+
+// Fast drop for common WordPress/scanner bots
+app.all(["/wp-admin*", "/wp-login*", "/xmlrpc.php*"], (_req, res) => {
+  res.status(404).send("Not Found");
+});
+
 // Explicit sitemap.xml and robots.txt routes
 app.get("/favicon.ico", (_req, res) => {
   res.header("Content-Type", "image/svg+xml");
