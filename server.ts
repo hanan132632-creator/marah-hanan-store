@@ -28,7 +28,7 @@ function getGeminiClient(): GoogleGenAI | null {
 }
 
 // Serve standalone static HTML folder (/html)
-app.use('/html', express.static(path.join(process.cwd(), 'html')));
+app.use('/html', express.static(path.join(process.cwd(), 'public', 'html')));
 
 // Explicit sitemap.xml and robots.txt routes
 app.get("/favicon.ico", (_req, res) => {
