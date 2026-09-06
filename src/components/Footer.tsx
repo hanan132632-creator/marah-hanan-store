@@ -8,7 +8,8 @@ import {
   Globe, 
   Sparkles, 
   Heart,
-  FileText
+  FileText,
+  BookOpen
 } from 'lucide-react';
 
 interface FooterProps {
@@ -156,22 +157,45 @@ export const Footer: React.FC<FooterProps> = ({
                   من نحن - قصة مرح حنان ستور
                 </button>
               </li>
-              <li className="pt-1 border-t border-stone-850">
+              <li className="pt-2 border-t border-stone-850">
                 <a
-                  href="/html/article-luxury-gifts-guide.html"
-                  className="hover:text-amber-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                  href="/html/blog.html"
+                  className="hover:text-amber-300 transition-colors text-amber-400 font-bold flex items-center justify-between"
                 >
-                  <FileText className="w-3 h-3 text-rose-500" />
-                  <span>دليل الهدايا الفاخرة وفن الإهداء</span>
+                  <span className="flex items-center gap-1.5">
+                    <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                    <span>المدونة المعرفية وأدلة الشراء</span>
+                  </span>
+                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.5 rounded border border-amber-500/30">
+                    8 مقالات
+                  </span>
                 </a>
               </li>
               <li>
                 <a
-                  href="/html/article-smart-ecommerce-guide.html"
-                  className="hover:text-emerald-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                  href="/html/article-aromatherapy-essential-oils-guide.html"
+                  className="hover:text-purple-300 transition-colors text-stone-300 flex items-center gap-1.5"
                 >
-                  <FileText className="w-3 h-3 text-emerald-500" />
-                  <span>دليل التسوق الإلكتروني الآمن 2026</span>
+                  <FileText className="w-3 h-3 text-purple-400" />
+                  <span>دليل العلاج بالروائح والزيوت العطرية</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/html/article-night-skincare-regeneration-guide.html"
+                  className="hover:text-rose-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                >
+                  <FileText className="w-3 h-3 text-rose-400" />
+                  <span>دليل روتين العناية الليلية وترميم البشرة</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/html/article-smart-incense-fragrances-guide.html"
+                  className="hover:text-amber-300 transition-colors text-stone-300 flex items-center gap-1.5"
+                >
+                  <FileText className="w-3 h-3 text-amber-400" />
+                  <span>دليل فنون العطور والمباخر الذكية</span>
                 </a>
               </li>
             </ul>

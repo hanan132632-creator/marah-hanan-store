@@ -21,8 +21,10 @@ import {
   Globe, 
   ShoppingBag, 
   Tag,
-  ArrowLeft
+  ArrowLeft,
+  BookOpen
 } from 'lucide-react';
+import { BLOG_ARTICLES } from './data/articles';
 
 const CURRENCIES: Record<Currency, CurrencyConfig> = {
   SAR: { code: 'SAR', symbol: 'ر.س', name: 'ريال سعودي', rateFromSAR: 1 },
@@ -364,85 +366,69 @@ export default function App() {
               <div id="blog-section" className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6 text-right scroll-mt-24">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-5">
                   <div>
-                    <span className="text-[11px] font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100">
-                      مقالات وأدلة تسوق حصرية
+                    <span className="text-[11px] font-black text-rose-600 bg-rose-50 px-3 py-1 rounded-full border border-rose-100 flex items-center gap-1.5 w-fit">
+                      <BookOpen className="w-3.5 h-3.5 text-rose-600" />
+                      <span>المدونة المعرفية وأدلة التسوق (8 مقالات حصرية)</span>
                     </span>
                     <h3 className="text-xl sm:text-2xl font-black text-stone-900 mt-2">
-                      دليل مرح حنان ستور للأناقة والتسوق الآمن
+                      أدلة مرح حنان ستور للعناية، العطور، والأجهزة الذكية
                     </h3>
                     <p className="text-stone-500 text-xs mt-1">
-                      نشارككم أحدث الرؤى والأسرار لاختيار الهدايا الفاخرة والتسوق الإلكتروني الموثوق
+                      نشارككم أحدث المقالات التثقيفية، أسرار الروتين والجمال، وتقنيات الحياة العصرية
                     </p>
                   </div>
-                  <a
-                    href="/html/sitemap.html"
-                    className="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1 shrink-0"
-                  >
-                    <span>فهرس الأدلة والصفحات</span>
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                  </a>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="/html/blog.html"
+                      className="text-xs font-bold bg-stone-900 hover:bg-stone-800 text-white px-4 py-2 rounded-xl transition flex items-center gap-1.5 shadow-2xs"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                      <span>عرض المدونة الكاملة</span>
+                    </a>
+                    <a
+                      href="/html/sitemap.html"
+                      className="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1 shrink-0"
+                    >
+                      <span>فهرس الأدلة</span>
+                      <ArrowLeft className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Article 1 */}
-                  <a
-                    href="/html/article-luxury-gifts-guide.html"
-                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-rose-300 transition-all space-y-3 flex flex-col"
-                  >
-                    <div className="w-full h-40 rounded-xl overflow-hidden mb-1">
-                      <img
-                        src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1200&q=80"
-                        alt="دليل الهدايا الفاخرة"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-rose-700 bg-rose-100/70 px-2.5 py-0.5 rounded-lg">
-                        فن الإهداء
-                      </span>
-                      <span className="text-stone-400 text-[11px]">قراءة 5 دقائق</span>
-                    </div>
-                    <h4 className="font-black text-stone-900 group-hover:text-rose-600 transition text-base">
-                      دليل الهدايا الفاخرة: فن اختيار الهدية المثالية وقواعد الإتيكيت العصري
-                    </h4>
-                    <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
-                      سيكولوجية الإهداء وأسرار التغليف الملكي ومعايير اختيار الهدايا التي تدوم في الذاكرة.
-                    </p>
-                    <div className="pt-2 mt-auto text-xs font-bold text-rose-600 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
-                      <span>قراءة الدليل كاملاً</span>
-                      <ArrowLeft className="w-3 h-3" />
-                    </div>
-                  </a>
-
-                  {/* Article 2 */}
-                  <a
-                    href="/html/article-smart-ecommerce-guide.html"
-                    className="group block p-5 rounded-2xl bg-stone-50/70 hover:bg-stone-50 border border-stone-200 hover:border-emerald-300 transition-all space-y-3 flex flex-col"
-                  >
-                    <div className="w-full h-40 rounded-xl overflow-hidden mb-1">
-                      <img
-                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1200&q=80"
-                        alt="دليل التسوق الإلكتروني الآمن"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-bold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-lg">
-                        الأمان الرقمي
-                      </span>
-                      <span className="text-stone-400 text-[11px]">قراءة 6 دقائق</span>
-                    </div>
-                    <h4 className="font-black text-stone-900 group-hover:text-emerald-700 transition text-base">
-                      دليل التسوق الإلكتروني الذكي والآمن 2026: أسرار حماية البيانات وضمان الجودة
-                    </h4>
-                    <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
-                      كيف تضمن حقوقك كمستهلك، تميز المتاجر المعتمدة، وتقتنص أفضل العروض دون مخاطر.
-                    </p>
-                    <div className="pt-2 mt-auto text-xs font-bold text-emerald-700 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
-                      <span>قراءة الدليل كاملاً</span>
-                      <ArrowLeft className="w-3 h-3" />
-                    </div>
-                  </a>
+                {/* 8 Articles Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                  {BLOG_ARTICLES.map((article) => (
+                    <a
+                      key={article.id}
+                      href={article.url}
+                      className={`group block p-4 rounded-2xl bg-stone-50/80 hover:bg-stone-50 border border-stone-200 ${article.hoverBorderClass} transition-all space-y-3 flex flex-col shadow-2xs hover:shadow-md`}
+                    >
+                      <div className="w-full h-36 rounded-xl overflow-hidden mb-1 relative">
+                        <img
+                          src={article.image}
+                          alt={article.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <span className={`absolute top-2.5 right-2.5 font-bold text-[11px] px-2 py-0.5 rounded-md border shadow-xs ${article.categoryBadgeClass}`}>
+                          {article.category}
+                        </span>
+                      </div>
+                      <div className="flex items-center justify-between text-xs text-stone-400">
+                        <span>{article.date}</span>
+                        <span className="text-[11px]">{article.readTime}</span>
+                      </div>
+                      <h4 className="font-black text-stone-900 group-hover:text-rose-600 transition text-sm leading-snug line-clamp-2">
+                        {article.title}
+                      </h4>
+                      <p className="text-stone-600 text-xs leading-relaxed line-clamp-2">
+                        {article.excerpt}
+                      </p>
+                      <div className="pt-2 mt-auto text-xs font-bold text-rose-600 flex items-center gap-1 group-hover:translate-x-[-3px] transition-transform">
+                        <span>قراءة المقال</span>
+                        <ArrowLeft className="w-3 h-3" />
+                      </div>
+                    </a>
+                  ))}
                 </div>
               </div>
             </section>
